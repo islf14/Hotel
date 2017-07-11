@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dee630ca-b308-45c7-9081-25583ddbf15d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     huespedxhabitacion.`id_alquila` AS huespedxhabitacion_id_alquila,
+     huespedxhabitacion.`nro_hab` AS huespedxhabitacion_nro_hab,
+     huespedxhabitacion.`nombre_h` AS huespedxhabitacion_nombre_h,
+     huespedxhabitacion.`apellidos_h` AS huespedxhabitacion_apellidos_h,
+     huespedxhabitacion.`dni_huesped` AS huespedxhabitacion_dni_huesped,
+     huespedxhabitacion.`persomas extras` AS huespedxhabitacion_persomas_extras
+FROM
+     `huespedxhabitacion` huespedxhabitacion]]>
+	</queryString>
+	<field name="huespedxhabitacion_id_alquila" class="java.lang.Integer"/>
+	<field name="huespedxhabitacion_nro_hab" class="java.lang.Integer"/>
+	<field name="huespedxhabitacion_nombre_h" class="java.lang.String"/>
+	<field name="huespedxhabitacion_apellidos_h" class="java.lang.String"/>
+	<field name="huespedxhabitacion_dni_huesped" class="java.lang.String"/>
+	<field name="huespedxhabitacion_persomas_extras" class="java.lang.Long"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="f5a600b9-8832-49d3-b40b-0ba8572c6f17"/>
+				<staticText>
+					<reportElement x="150" y="20" width="400" height="72" forecolor="#FFFFFF" uuid="f2d2c834-0955-4837-9b96-fe173f8753a4"/>
+					<textElement textAlignment="Center">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CANTIDAD DE HUÉSPEDES POR HABITACIÓN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="19" y="20" width="96" height="46" forecolor="#FFFFFF" uuid="2f7a01f3-e7d6-429c-aa37-99edd605918d"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Yu Mincho" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+					</textElement>
+					<text><![CDATA[HOTEL TERRAZAS]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement mode="Transparent" x="20" y="20" width="100" height="46" forecolor="#FFFFFF" uuid="40c800ff-96f3-4d42-9791-383899a9c172"/>
+				</rectangle>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="d6068366-0527-45d6-8c52-6d839d920101"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="53" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="82783422-bf81-4577-b70d-a649420cc008"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="53" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="dfc2d3cb-1614-4b81-baf7-f0b382f7784c"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° Habitación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="145" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b6f8940d-67e7-4db7-9ba0-e752b6ab8a2d"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b18f70d8-e79d-4ca2-a94b-9354d687f76a"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="329" y="0" width="82" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="11df064a-ae8a-481b-ba23-6bf61222e02a"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="411" y="0" width="141" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2b4ce5e7-badc-43c3-95b2-ae2da4fc0b50"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de personas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="2dfe3eb9-2271-48f3-961c-ab779ee4dd14"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="53" height="20" uuid="d0b2481b-c6d8-4e28-942a-59099624130e"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{huespedxhabitacion_id_alquila}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="53" y="0" width="92" height="20" uuid="c9861ba8-5b75-4ca0-885b-05aecaf4ad7e"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{huespedxhabitacion_nro_hab}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="329" y="0" width="82" height="20" uuid="50d6defc-70a1-4f50-86f8-1f4e73603ea6"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{huespedxhabitacion_dni_huesped}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="411" y="0" width="141" height="20" uuid="57077bab-725b-4d6d-8dfc-290ee309dab5"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{huespedxhabitacion_persomas_extras}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="145" y="0" width="92" height="20" uuid="4909aba3-d563-4dd8-806a-bfeaaf5a492d"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{huespedxhabitacion_nombre_h}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="237" y="0" width="92" height="20" uuid="c001942f-f42e-40d1-a50a-19562108019f"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{huespedxhabitacion_apellidos_h}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="169f42d2-789d-4dc0-8549-61d56a83d80d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="7dbfc42b-be08-4a5f-9f3a-707e0fd539d0"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="ecf9479e-1e25-40f0-abf8-788d4949429d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8675784f-d9a9-4dcb-92cb-a96258b31ef0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT concat(nombre," ",apellido) as 'DATOS DEL RECEPCIONISTA', u.telefono as 'TELÉFONO', turno as 'TURNO', concat(nombre_h," ",apellidos_h) as 'DATOS DE HUÉSPED', 
+fecha_llegada as 'FECHA DE LLEGADA', h.telefono as 'TELÉFONO DE HUÉSPED'
+from usuario u inner join alquila a on u.id_usuario=a.usuario_id_usuario 
+INNER JOIN huesped h on h.id_huesped=a.huesped_id_huesped]]>
+	</queryString>
+	<field name="DATOS DEL RECEPCIONISTA" class="java.lang.String"/>
+	<field name="TELÉFONO" class="java.lang.String"/>
+	<field name="TURNO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATOS DE HUÉSPED" class="java.lang.String"/>
+	<field name="FECHA DE LLEGADA" class="java.sql.Timestamp"/>
+	<field name="TELÉFONO DE HUÉSPED" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="74">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-19" width="595" height="92" backcolor="#006699" uuid="640995f2-78f2-4587-9603-1f9e150fe564"/>
+				<staticText>
+					<reportElement x="151" y="27" width="368" height="33" forecolor="#FFFFFF" uuid="7ea63c7e-1c53-452d-820c-ea86e1dc38c1"/>
+					<textElement textAlignment="Center">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ATENCIÓN AL HUÉSPED]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement mode="Transparent" x="6" y="22" width="100" height="44" forecolor="#FFFFFF" backcolor="#3366FF" uuid="dcd71017-3e1f-4e06-87f0-c0af2f3b1883"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="10" y="20" width="96" height="46" forecolor="#FFFFFF" uuid="b6e06a3f-b0dc-4bf4-850a-400d4b2669fc"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Yu Mincho" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+					</textElement>
+					<text><![CDATA[HOTEL TERRAZAS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="c469da04-60be-44ef-a33e-b7d974314129"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="-13" width="92" height="33" forecolor="#006699" backcolor="#E6E6E6" uuid="1a0755ee-223a-4b2e-9b6c-1d4e950a9247"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Datos del recepcionista]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="-13" width="92" height="33" forecolor="#006699" backcolor="#E6E6E6" uuid="601b04bf-5c4c-48d9-afb2-1086071786c0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="-13" width="92" height="33" forecolor="#006699" backcolor="#E6E6E6" uuid="f12c5761-87f2-40f3-9f4e-a2555484a65b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="-13" width="92" height="33" forecolor="#006699" backcolor="#E6E6E6" uuid="70be1091-68ee-4b50-a1ad-bce850f46f99"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Datos del Huésped]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="368" y="-13" width="92" height="33" forecolor="#006699" backcolor="#E6E6E6" uuid="78ee2d87-6846-48f7-8566-ba1c01915319"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de llegada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="460" y="-13" width="92" height="33" forecolor="#006699" backcolor="#E6E6E6" uuid="ad64ce77-49c4-46d8-bf10-e6aae17eabcd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono del huésped]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="41fd3fda-0da3-446d-827e-2afc4bf62bab"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="92" height="20" uuid="823549df-13ef-42d6-aa31-5288aec4ef37"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATOS DEL RECEPCIONISTA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="0" width="92" height="20" uuid="113c41b2-e6e3-46c6-ab3d-8d2923569052"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TELÉFONO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="184" y="0" width="92" height="20" uuid="5eebf79c-b11e-4970-8894-3a95843ab1c3"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TURNO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="92" height="20" uuid="cbe19fa8-cf53-4c1d-8785-aeba27a538e3"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATOS DE HUÉSPED}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="368" y="0" width="92" height="20" uuid="89f41b11-08fe-4c96-8f5f-9a147d8d9a80"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA DE LLEGADA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="460" y="0" width="92" height="20" uuid="cb5450aa-6137-498e-9d8f-3d0cb25037af"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TELÉFONO DE HUÉSPED}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="487a8c9b-953a-48a1-b68c-fe4119df5f3a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="36a15e29-feb8-47dc-805f-15422c815643"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="68950b18-c594-4713-911f-529f8cf6aab1"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
